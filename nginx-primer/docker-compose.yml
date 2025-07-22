@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - .nginx-primer/nginx.conf:
+    depends_on:
+      - web
+    networks:
+      - webnet
+    

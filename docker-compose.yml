@@ -1,0 +1,24 @@
+version: '3'
+services:
+  database:
+    container_name: toothfixer
+    image: postgres:latest
+    ports:
+      - "5434:5432"
+    volumes:
+      - /c/Users/Admin/OneDrive/Desktop/data/postgres/csc2022:/var/lib/postgresql/data
+    env_file:
+      - csc2022.env
+
+  web:
+       container_name: nginx-csc2024
+       build:
+            context: .
+            dockerfile: nginx-primer/nginx/Dockerfile
+       ports:
+         - 8080:80
+         - 8443:443
+         - 5173:173
+       extra_hosts:
+         - "app-server:192.168.1.3"
+

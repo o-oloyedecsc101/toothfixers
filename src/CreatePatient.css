@@ -1,0 +1,61 @@
+.create-patient-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+.create-patient-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.create-patient-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+.create-patient-form input[type="text"],
+.create-patient-form input[type="date"],
+.create-patient-form input[type="checkbox"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust for padding */
+}
+
+.create-patient-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.create-patient-form .checkbox-container label {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.create-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #004d40;
+}
